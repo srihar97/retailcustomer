@@ -2,22 +2,12 @@
 # coding: utf-8
 
 # In[26]:
-
-
 import pickle
 import pandas as pd
 import streamlit as st
-from sklearn import tree
-
-# In[27]:
-
 
 pickle_in = open("classifier.pkl",'rb')
 model = pickle.load(pickle_in)
-
-
-# In[28]:
-
 
 @st.cache()
 
@@ -26,9 +16,6 @@ def prediction(recency, frequency, monetary):
     prediction= model.predict(pd.DataFrame([[recency, frequency, monetary]]))
     
     return prediction
-
-
-# In[29]:
 
 
 def main():
@@ -49,9 +36,6 @@ def main():
     if st.button('classify'):
         result = prediction(recency, frequency, monetary)
         st.success(f'The retailer belongs to the cluster {result[0]:.0f}')
-
-
-# In[30]:
 
 
 if __name__== '__main__':

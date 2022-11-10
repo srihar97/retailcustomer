@@ -1,7 +1,5 @@
+streamlit
 Flask
 sklearn
 pandas
-numpy
-matplotlib
-streamlit
-gunicorn
+numpy 
