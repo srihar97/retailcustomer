@@ -7,7 +7,7 @@
 import pickle
 import pandas as pd
 import streamlit as st
-from sklearn.tree import DecisionTreeClassifier
+
 
 
 # In[27]:
