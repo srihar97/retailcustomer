@@ -7,12 +7,12 @@
 import pickle
 import pandas as pd
 import streamlit as st
-import os
+
 
 # In[27]:
 
 
-pickle_in = open("S:\Github files\retailcustomer\classifier.pkl",'rb')
+pickle_in = open("classifier.pkl",'rb')
 model = pickle.load(pickle_in)
 
 
